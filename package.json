@@ -1,0 +1,14 @@
+{
+  "name": "webpack-5-fundamentals-udemy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "codiaji <codiaji@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build":"webpack"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
