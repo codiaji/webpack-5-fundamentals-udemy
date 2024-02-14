@@ -1,1 +1,2 @@
-console.log('Webpack Dev Server and HMR configured')
+const foo =(name) => { console.log(`Hello ${name}.`); };
+foo('Amine');
