@@ -1,1 +1,1 @@
-console.log("Getting started")
+console.log('Webpack Dev Server and HMR configured')
