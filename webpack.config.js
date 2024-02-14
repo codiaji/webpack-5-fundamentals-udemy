@@ -1,5 +1,6 @@
 /** @type {import('webpack').Configuration} */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
@@ -16,10 +17,16 @@ module.exports = {
         use:'babel-loader'
       },
       {
-        test: /\.scss$/,
+        test: /\.scss$/i,
         use:[
-          'style-loader',
+          {
+            loader:MiniCssExtractPlugin.loader,
+            options:{
+
+            }
+          },
           'css-loader',
+          'postcss-loader',
           'sass-loader'
         ]
       }
@@ -28,6 +35,9 @@ module.exports = {
   plugins:[
     new HtmlWebpackPlugin({
       title:'Development'
+    }),
+    new MiniCssExtractPlugin({
+      filename:'[name].css'
     })
   ],
   output: {
